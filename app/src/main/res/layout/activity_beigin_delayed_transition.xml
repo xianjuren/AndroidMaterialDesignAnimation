@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/scene_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cuteboy"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@mipmap/cuteboy"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cutegirl"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@id/cuteboy"
+            android:src="@mipmap/cutegirl"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/hxy"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/cuteboy"
+            android:layout_margin="10dp"
+            android:src="@mipmap/hxy"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/lly"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/cuteboy"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@id/hxy"
+            android:src="@mipmap/lly"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

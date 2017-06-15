@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- provide a different drawable for each state-->
+    <item
+        android:id="@+id/pressed"
+        android:drawable="@drawable/bg_1"
+        android:state_pressed="true"/>
+    <item
+        android:id="@+id/focused"
+        android:drawable="@drawable/cuteboy"
+        android:state_focused="true"/>
+    <item
+        android:id="@+id/center"
+        android:drawable="@drawable/cutegirl"/>
+
+    <!-- specify a transition -->
+    <transition
+        android:fromId="@+id/center"
+        android:toId="@+id/pressed">
+        <animation-list>
+            <item
+                android:drawable="@drawable/timg"
+                android:duration="15"/>
+            <item
+                android:drawable="@drawable/timg2"
+                android:duration="15"/>
+        </animation-list>
+    </transition>
+</animated-selector>

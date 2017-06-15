@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--底部整体布局下滑-->
+    <!--可以添加如下id，而不用在代码中设置setTransitionGroup(true)-->
+    <!--<target android:targetId="@id/icon_sf"></target>-->
+    <!--<target android:targetId="@id/icon_bh"></target>-->
+    <!--<target android:targetId="@id/tv_show"></target>-->
+    <slide
+        android:duration="500"
+        android:slideEdge="bottom">
+        <targets>
+            <target android:targetId="@+id/liney_bottom"/>
+        </targets>
+    </slide>
+
+    <!--view背景和短信按钮一起向上滑动-->
+    <!--也可以添加下面的布局id，代码中设置setTransitionGroup(true)一起滑动-->
+    <!--<target android:targetId="@id/relay_flag"></target>-->
+    <slide android:slideEdge="top" android:duration="500">
+        <targets>
+            <target android:targetId="@id/image_bg"/>
+            <target android:targetId="@+id/fab"/>
+        </targets>
+    </slide>
+
+
+
+</transitionSet>

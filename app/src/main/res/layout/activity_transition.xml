@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="16dp">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:onClick="explode"
+        android:text="Explode(爆炸)"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:onClick="slide"
+        android:text="Slide(幻灯片)"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:onClick="fade"
+        android:text="Fade(淡入淡出)"/>
+
+
+    <Button
+        android:id="@+id/btn_activityOptions"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:onClick="activityOptions"
+        android:text="ActivityOptions(共享元素)"
+        />
+
+    <Button
+        android:id="@+id/shareMoreName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:onClick="shareMoreName"
+        android:text="ActivityOptions(多个共享元素)"
+        />
+
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:onClick="go"
+        android:text="TransitionManager.go()"/>
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:onClick="beginDelayed"
+        android:text="TransitionManager.beginDelayed()"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:onClick="contentTransition"
+        android:text="contentTransition"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:onClick="frAc"
+        android:text="fragment和Activity动画"/>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="64dp"
+        android:height="64dp"
+        android:viewportHeight="600"
+        android:viewportWidth="600">
+
+    <!--<group>这个标签，group 就是 组，就是用来把多个path或者subgroup组合起来，group提供了一些属性比如平移、-->
+    <!--旋转、缩放，这些属性值得变化会反应在它内部的path和subgroup元素上。-->
+    <!--<path>下的android:name属性，这个属性的作用是在使用动画时指定动画要驱动的对象，-->
+    <!--即标记的target，唯一标识。-->
+    <group
+        android:name="rotationGroup"
+        android:pivotX="300.0"
+        android:pivotY="300.0"
+        android:rotation="45">
+        <path
+            android:name="v"
+            android:fillColor="#000000"
+            android:pathData="M300,70 l 0,-70 70,70 0,0 -70,70z"/>
+    </group>
+
+</vector>
