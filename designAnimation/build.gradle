@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+apply plugin: 'packer'
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.design"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        v2 {
+            storeFile file("android.keystore")
+            storePassword "android"
+            keyAlias "android"
+            keyPassword "android"
+            v2SigningEnabled true
+        }
+
+    }
+
+    buildTypes {
+
+        release {
+            signingConfig signingConfigs.v2
+            minifyEnabled true
+            //应用程序优化
+            zipAlignEnabled true
+            //是否去除无效的资源文件
+            shrinkResources true
+            //默认不混淆，混淆设为true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        free {}
+    }
+
+
+}
+
+
+packer {
+    archiveNameFormat = '${appPkg}-${buildType}-v${versionName}-${channel}'
+    archiveOutput = new File(project.rootProject.buildDir, "apks")
+
+    channelMap = [
+            "free" : project.rootProject.file("channels/free.txt"),
+    ]
+}
+
+dependencies {
+    compile 'com.mcxiaoke.packer-ng:helper:2.0.0'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    testCompile 'junit:junit:4.12'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.android.support:design:25.2.0'
+}

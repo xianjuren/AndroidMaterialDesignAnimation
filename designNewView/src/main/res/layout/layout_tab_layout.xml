@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.TabLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/tab_layout"
+             app:layout_scrollFlags="scroll"
+             android:background="#ffffff"
+             app:tabIndicatorColor="@color/colorPrimary"
+             app:tabIndicatorHeight="2dp"
+             app:tabSelectedTextColor="@color/colorPrimary"
+             app:tabTextColor="#ced0d3"
+             android:layout_width="match_parent"
+             android:layout_height="?actionBarSize">
+
+
+    <android.support.design.widget.TabItem
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:icon="@drawable/tab_selector"/>
+
+    <android.support.design.widget.TabItem
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="分享"/>
+
+    <android.support.design.widget.TabItem
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="收藏"/>
+
+    <android.support.design.widget.TabItem
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="关注"/>
+
+    <android.support.design.widget.TabItem
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="关注者"/>
+
+</android.support.design.widget.TabLayout>
